@@ -35,7 +35,7 @@ const AppContextProvider = (props) => {
     const generateImage = async (prompt) => {
 
         try {
-            const API_BASE_URL = "http://localhost:4000";
+            const API_BASE_URL = "https://pixscribe-app-server.onrender.com";
             const {data} = await axios.post(`${API_BASE_URL}/api/image/generate-image`, {prompt}, {headers: {token}})
             
             if (data.success) {
